@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meri Khamoshi - Tum Bin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #d4bfff;
+    }
+
+    .section {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .active {
+      display: block;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255,255,255,0.2);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 15px auto;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .nicknames {
+      margin: 20px 0;
+      font-size: 18px;
+      color: #e0b3ff;
+    }
+
+    button {
+      margin: 10px;
+      padding: 14px 32px;
+      font-size: 18px;
+      background: #8884a3;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #a798b9;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .fade {
+      animation: fadeIn 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meri Kho Gayi Khushi</h1>
+    <p class="nicknames">Shona • Meri Jaan • Meri Khushi • Meri Zindagi • Ab Khamosh Si • Jo Ab Juda Si Hai</p>
+  </header>
+
+  <div id="page1" class="section active fade">
+    <img src="https://ik.imagekit.io/g84qftdbb/pic1.jpeg?updatedAt=1748591472789" alt="">
+    <h2>Aaj Tumhara Birthday he</h2>
+    <p>Lekin tum door ho… Udaas hoon main, aur sochta hoon kya maine kuch galat kiya? Har lamha tumhari yaad aati hai. Tumhari khushi meri dua thi...</p>
+    <button onclick="goTo('page2')">Tumhari Yaadon Mein...</button>
+   </div>
+
+  <div id="page2" class="section fade">
+    <h2>Tum Bina Sab Khaali Hai</h2>
+    <p>Na tumhari baatein hoti hain, na woh hansna. Main khud se baat karne laga hoon... Tumhari yaadein ab aansuon mein badal chuki hain. Kya tum mujhe bhool gayi ho meri jaan?</p>
+    <div> 
+      <button onclick="alert('Main har din bas tumhara intezaar karta hoon')">Main Tumhe Miss Karta Hoon</button>
+      <button onclick="alert('Tum wapas aajao... please')">Wapas Aa Jao</button>
+      <button onclick="alert('Mujhe tumhari zarurat hai')">Tum Meri Zarurat Ho</button>
+    </div>  
+    <button onclick="goTo('page3')">Tumhari Tasveerein...</button>
+  </div>
+
+  <div id="page3" class="section fade">
+    <h2>Tumhari Tasveerein, Meri Aankhon Ka Ashiyana</h2>
+    <p>Tumse juda har tasveer ab sirf ek yaad ban gayi hai. Tum ho lekin saath nahi ho... Tumhari tasveerein hi ab mera sukoon hain.</p>
+    <div class="gallery">
+      <img src="https://ik.imagekit.io/g84qftdbb/WhatsApp%20Image%202025-05-27%20at%2012.22.24%20AM.jpeg?updatedAt=1748591567568">
+      <img src="https://ik.imagekit.io/g84qftdbb/WhatsApp%20Image%202025-05-25%20at%209.37.14%20PM.jpeg?updatedAt=1748591567619" alt="">
+      <img src="https://ik.imagekit.io/g84qftdbb/WhatsApp%20Image%202025-05-27%20at%2012.29.48%20AM.jpeg?updatedAt=1748591567774">
+    </div>
+    <p style="margin-top:40px">Aansuon mein bhi tumhara chehra dikhayi deta hai… Tum meri dua thi, ab sirf duaon mein ho.</p>
+    
+    <audio controls autoplay loop style="margin-top:20px">
+  <source src="./audio//AM.mpeg" type="audio/mpeg">
+</audio>
+    </audio>
+    
+    <br><br>
+    <button onclick="goTo('page1')">Phir Se Yaad Karoon Tumhein</button>
+  </div>
+
+  <footer>
+    &copy; 10 june 2025 – Tumhara Pagal sirf Tumhara 💔
+  </footer>     
+
+  <script>
+    function goTo(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
